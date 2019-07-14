@@ -44,7 +44,8 @@ Connection: keep-alive
 </code>
 
 **Example**
-<p>Start the project with this command</p>
+<p>Start the project with this commands</p>
+<code> npm install </code>
 <code> node net.js </code>
 <p>And go to http://localhost:3000</p>
 <p>Or try with <em> curl http://localhost:3000</em></p>
