@@ -1,10 +1,12 @@
-var net = require('net');
-var fs = require('fs');
+let net = require('net');
+let fs = require('fs');
 
-var server = net.createServer(function(socket) {
+const htmlResponsePage = 'page_sample_html_response.txt';
+
+let server = net.createServer(function(socket) {
   socket.on('data', function(data) {
 	   console.log('Received: ' + data);
-     fs.createReadStream('test.txt').pipe(socket);
+     fs.createReadStream(htmlResponsePage).pipe(socket);
      //socket.write('Echo server\r\n');
 	   // socket.pipe(socket);
   });
